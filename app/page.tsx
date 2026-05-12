@@ -169,7 +169,7 @@ export default async function HomePage() {
                       {post.excerpt}
                     </p>
                     <div className="flex items-center gap-2 pt-4 border-t border-purple-900/20">
-                      <div className="w-6 h-6 bg-gradient-to-br from-purple-600 to-violet-700 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                      <div className="w-6 h-6 bg-linear-to-br from-purple-600 to-violet-700 rounded-full flex items-center justify-center text-white text-xs font-bold">
                         {post.author?.name?.[0]?.toUpperCase() ?? "A"}
                       </div>
                       <span className="text-slate-400 text-xs">{post.author?.name}</span>

@@ -124,6 +124,7 @@ export default function NewPostPage() {
                 <label key={cat} className="cursor-pointer">
                   <input {...register("category")} type="radio" value={cat} className="sr-only" />
                   <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-medium border transition-all ${
+                    // eslint-disable-next-line react-hooks/incompatible-library
                     watch("category") === cat
                       ? "bg-purple-600 text-white border-purple-600"
                       : "bg-white/5 text-slate-400 border-purple-900/30 hover:border-purple-600/50 hover:text-white"
