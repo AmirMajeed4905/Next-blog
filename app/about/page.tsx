@@ -6,9 +6,9 @@ const skills = [
 ];
 
 const timeline = [
-  { year: "2024", title: "Blog Launch", desc: "Is blog ka safar shuru kiya" },
-  { year: "2023", title: "Full Stack Journey", desc: "Backend aur frontend dono seekhna shuru kiya" },
-  { year: "2022", title: "Coding Start", desc: "Programming ki duniya mein qadam rakha" },
+  { year: "2024", title: "Blog Launch", desc: "Started this blog journey" },
+  { year: "2023", title: "Full Stack Journey", desc: "Started learning both frontend and backend development" },
+  { year: "2022", title: "Coding Start", desc: "Entered the world of programming" },
 ];
 
 export default function AboutPage() {
@@ -23,19 +23,19 @@ export default function AboutPage() {
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-purple-900/30 border border-purple-700/40 rounded-full px-4 py-1.5 text-purple-300 text-sm font-medium mb-6">
             <div className="w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse" />
-            Hamare Baare Mein
+            About Us
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6 leading-tight">
-            Ideas Share Karna{" "}
+            Sharing Ideas is{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-violet-400">
-              Hamara Maqsad
+              Our Purpose
             </span>
           </h1>
 
           <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            Ye blog un logon ke liye hai jo technology, programming, aur digital world ke baare mein
-            gehri aur honest baatein sunna chahte hain.
+            This blog is for people who want deep and honest insights about technology,
+            programming, and the digital world.
           </p>
         </div>
       </section>
@@ -46,21 +46,23 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-white mb-4">
-                Kahani Kya Hai?
+                What is this story?
               </h2>
               <p className="text-slate-400 leading-relaxed mb-4">
-                Ye blog ek simple idea se shuru hua — apni learning share karna. Jo cheezein
-                seekhi, jo galtiyan ki, jo discoveries hui — sab kuch yahan likhna.
+                This blog started with a simple idea — to share what I learn.
+                Everything I study, the mistakes I make, and the things I discover
+                are written here.
               </p>
               <p className="text-slate-400 leading-relaxed mb-6">
-                Har post mein koshish hoti hai ke complex cheezein simple tarike se samjhayein
-                jaayein — chahe aap beginner hon ya experienced developer.
+                Every post tries to explain complex topics in a simple way — whether
+                you are a beginner or an experienced developer.
               </p>
+
               <Link
                 href="/blog"
                 className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white font-medium px-6 py-3 rounded-xl transition-all shadow-lg shadow-purple-900/30"
               >
-                Posts Parhen
+                Read Posts
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -73,7 +75,7 @@ export default function AboutPage() {
                 { label: "Posts", value: "50+", icon: "📝" },
                 { label: "Readers", value: "1K+", icon: "👥" },
                 { label: "Topics", value: "10+", icon: "🎯" },
-                { label: "Saal Se", value: "2022", icon: "📅" },
+                { label: "Since", value: "2022", icon: "📅" },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -94,8 +96,9 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-3">Tech Stack</h2>
-            <p className="text-slate-400">Jo technologies hum use karte hain</p>
+            <p className="text-slate-400">Technologies we use</p>
           </div>
+
           <div className="flex flex-wrap gap-3 justify-center">
             {skills.map((skill) => (
               <span
@@ -113,17 +116,20 @@ export default function AboutPage() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-3">Safar</h2>
-            <p className="text-slate-400">Kahan se kahan tak aaye</p>
+            <h2 className="text-3xl font-bold text-white mb-3">Journey</h2>
+            <p className="text-slate-400">How it all started</p>
           </div>
+
           <div className="relative">
             <div className="absolute left-8 top-0 bottom-0 w-px bg-purple-900/50" />
+
             <div className="space-y-8">
               {timeline.map((item, i) => (
                 <div key={i} className="flex gap-6 items-start">
                   <div className="relative z-10 w-16 h-16 bg-[#13131f] border-2 border-purple-700/50 rounded-2xl flex items-center justify-center shrink-0">
                     <span className="text-purple-400 text-sm font-bold">{item.year}</span>
                   </div>
+
                   <div className="bg-white/5 border border-purple-900/30 rounded-2xl p-5 flex-1 hover:border-purple-700/40 transition-all">
                     <h3 className="text-white font-semibold mb-1">{item.title}</h3>
                     <p className="text-slate-400 text-sm">{item.desc}</p>
@@ -140,23 +146,26 @@ export default function AboutPage() {
         <div className="max-w-2xl mx-auto text-center">
           <div className="bg-linear-to-br from-purple-900/30 to-violet-900/20 border border-purple-800/30 rounded-3xl p-10">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Saath Milein?
+              Let’s Connect?
             </h2>
+
             <p className="text-slate-400 mb-8">
-              Koi sawaal hai, feedback deni hai ya bas baat karni hai — hum yahan hain.
+              If you have questions, feedback, or just want to talk — we are here.
             </p>
+
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/blog"
                 className="bg-linear-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white font-medium px-6 py-3 rounded-xl transition-all"
               >
-                Blog Parhen
+                Read Blog
               </Link>
+
               <Link
                 href="/register"
                 className="bg-white/5 hover:bg-white/10 border border-purple-800/50 text-slate-300 hover:text-white font-medium px-6 py-3 rounded-xl transition-all"
               >
-                Join Karein
+                Join Us
               </Link>
             </div>
           </div>

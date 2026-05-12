@@ -61,8 +61,8 @@ export default function RegisterForm() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
               </svg>
             </div>
-            <h1 className="text-2xl font-bold text-white">Account Banayein</h1>
-            <p className="text-white/60 mt-1 text-sm">Aaj hi join karein</p>
+            <h1 className="text-2xl font-bold text-white">Create Account</h1>
+            <p className="text-white/60 mt-1 text-sm">Join us today</p>
           </div>
 
           {serverError && (
@@ -76,11 +76,11 @@ export default function RegisterForm() {
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-2">Naam</label>
+              <label className="block text-sm font-medium text-white/80 mb-2">Name</label>
               <input
                 {...register("name")}
                 type="text"
-                placeholder="Aapka naam"
+                placeholder="Your name"
                 className={`w-full bg-white/10 border ${errors.name ? "border-red-500" : "border-white/20"} text-white placeholder-white/40 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition`}
               />
               {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>}
@@ -109,7 +109,7 @@ export default function RegisterForm() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-2">Password Confirm karein</label>
+              <label className="block text-sm font-medium text-white/80 mb-2">Password Confirmation</label>
               <input
                 {...register("confirmPassword")}
                 type="password"
@@ -130,7 +130,7 @@ export default function RegisterForm() {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
                   </svg>
-                  Account ban raha hai...
+                  Creating account...
                 </>
               ) : "Register"}
             </button>
@@ -141,7 +141,7 @@ export default function RegisterForm() {
               <div className="w-full border-t border-white/20" />
             </div>
             <div className="relative flex justify-center text-xs">
-              <span className="px-3 text-white/50">ya phir</span>
+              <span className="px-3 text-white/50">or</span>
             </div>
           </div>
 
@@ -155,13 +155,13 @@ export default function RegisterForm() {
               <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
               <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
             </svg>
-            Google se register karein
+            Sign up with Google
           </button>
 
           <p className="text-center text-sm text-white/50 mt-6">
-            Pehle se account hai?{" "}
+            Do you already have an account?{" "}
             <Link href="/login" className="text-purple-400 hover:text-purple-300 font-medium">
-              Login karein
+              Log in
             </Link>
           </p>
         </div>
