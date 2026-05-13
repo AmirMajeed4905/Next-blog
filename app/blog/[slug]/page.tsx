@@ -1,7 +1,9 @@
 import { prisma } from "@/lib/prisma";
-import { formatDate } from "@/lib/utils";
+import { formatDate, categoryColors } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export default async function PostPage({
   params,
@@ -45,7 +47,7 @@ export default async function PostPage({
           </Link>
 
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-xs font-medium px-3 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-700/30">
+            <span className={`text-xs font-medium px-3 py-1 rounded-full border ${categoryColors[post.category] ?? categoryColors["General"]}`}>
               {post.category}
             </span>
             <span className="text-slate-500 text-sm">{formatDate(post.createdAt)}</span>
@@ -71,11 +73,13 @@ export default async function PostPage({
         </div>
       </section>
 
-      {/* Content */}
+      {/* Content — Markdown rendered */}
       <section className="py-12 px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="prose prose-invert prose-purple max-w-none text-slate-300 leading-relaxed whitespace-pre-wrap">
-            {post.content}
+          <div className="prose-custom">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {post.content}
+            </ReactMarkdown>
           </div>
         </div>
       </section>
